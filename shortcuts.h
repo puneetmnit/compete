@@ -31,4 +31,9 @@ using MIVS = unordered_map<int, vector<string>>;
 using SI = unordered_set<int>;
 using SS = unordered_set<string>;
 
+#define Sort(c) = sort(c.begin(), c.end());
+#define Sortj(c,i) = sort(c.begin(), c.begin()+(j));
+#define Sortij(c,i,j) = sort(c.begin()+(i), c.begin()+(i)+(j));
+#define Sorti(c,i) = sort(c.begin()+(i), c.end());
+
 

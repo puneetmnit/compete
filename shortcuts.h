@@ -17,7 +17,7 @@ using VI = vector<int>;
 using VVI = V_<VI>;
 
 using LI = list<int>;
-using LI = list<list<int>>;
+using LLI = list<list<int>>;
 using LVI = list<vector<int>>;
 using VLI = vector<list<int>>;
 

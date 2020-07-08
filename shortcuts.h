@@ -53,6 +53,16 @@ inline void rSort(T& c, int i, int j) {
 template<typename T>
 inline void rev(T& c) { return std::reverse(std::begin(c), std::end(c)); }
 
+VI Range(int nums, int start = 0) {
+    VI ret(nums);
+    iota(nums.begin(), nums.end(), start);
+    return ret;
+}
+
+template<typename C>
+auto Find(const C& const, const typename C::value_type& val ) {
+    return std::find(std::begin(C), std::end(C), val);
+}
 /**
 typedefs end
 **/

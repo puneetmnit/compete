@@ -1,5 +1,6 @@
-/* c+++ shortcuts
-include this to add time saving shortcuts*/
+/**
+typedefs start
+**/
 
 // for
 #define For(i,n) for(int i=0; i<(n); ++i)
@@ -11,29 +12,49 @@ include this to add time saving shortcuts*/
 
 // containers
 template<typename T>
-using V_ = vector<T>;
+using V_ = std::vector<T>;
 
-using VI = vector<int>;
+using VI = std::vector<int>;
 using VVI = V_<VI>;
 
-using LI = list<int>;
-using LLI = list<list<int>>;
-using LVI = list<vector<int>>;
-using VLI = vector<list<int>>;
+using LI = std::list<int>;
+using LLI = std::list<list<int>>;
+using LVI = std::list<vector<int>>;
+using VLI = std::vector<list<int>>;
 
-using MII = unordered_map<int, int>;
-using MSS = unordered_map<string, string>;
-using MSI = unordered_map<string, int>;
-using MIS = unordered_map<int, string>;
-using MIV = unordered_map<int, vector<int>>;
-using MIVS = unordered_map<int, vector<string>>;
+using MII = std::unordered_map<int, int>;
+using MSS = std::unordered_map<string, string>;
+using MSI = std::unordered_map<string, int>;
+using MIS = std::unordered_map<int, string>;
+using MIV = std::unordered_map<int, vector<int>>;
+using MIVS = std::unordered_map<int, vector<string>>;
 
-using SI = unordered_set<int>;
-using SS = unordered_set<string>;
+using SI = std::unordered_set<int>;
+using SS = std::unordered_set<string>;
 
-#define Sort(c) = sort(c.begin(), c.end());
-#define Sortj(c,i) = sort(c.begin(), c.begin()+(j));
-#define Sortij(c,i,j) = sort(c.begin()+(i), c.begin()+(i)+(j));
-#define Sorti(c,i) = sort(c.begin()+(i), c.end());
+template<typename T>
+inline void Sort(T& c, int i=0) {
+  std::sort(std::begin(c)+i, std::end(c));
+}
+template<typename T>
+inline void Sort(T& c, int i, int j) {
+  std::sort(std::begin(c)+i, std::begin(c)+j);
+}
+
+template<typename T>
+inline void rSort(T& c, int i=0) {
+  std::sort(std::begin(c)+i, std::end(c), std::greater<typename T::value_type>{});
+}
+template<typename T>
+inline void rSort(T& c, int i, int j) {
+  std::sort(std::begin(c)+i, std::begin(c)+j, std::greater<typename T::value_type>{});
+}
+
+template<typename T>
+inline void rev(T& c) { return std::reverse(std::begin(c), std::end(c)); }
+
+/**
+typedefs end
+**/
 
 

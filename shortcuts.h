@@ -55,13 +55,25 @@ inline void rev(T& c) { return std::reverse(std::begin(c), std::end(c)); }
 
 VI Range(int nums, int start = 0) {
     VI ret(nums);
-    iota(nums.begin(), nums.end(), start);
+    iota(ret.begin(), ret.end(), start);
     return ret;
 }
 
 template<typename C>
-auto Find(const C& const, const typename C::value_type& val ) {
-    return std::find(std::begin(C), std::end(C), val);
+inline auto Find(const C& cont, const typename C::value_type& val, typename C::const_iterator beg, typename C::const_iterator last) {
+    return std::find(beg, last, val);
+}
+
+template<typename C>
+inline auto Find(const C& cont, const typename C::value_type& val) {
+    return Find(cont, val, std::begin(cont), std::end(cont));
+}
+
+template<typename C>
+inline auto Find(const C& cont, const typename C::value_type& val, typename C::const_iterator beg) {
+    return Find(cont, val, beg, std::end(cont));
+}
+
 }
 /**
 typedefs end

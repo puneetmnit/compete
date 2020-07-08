@@ -74,7 +74,7 @@ inline auto Find(const C& cont, const typename C::value_type& val, typename C::c
     return Find(cont, val, beg, std::end(cont));
 }
 
-}
+
 /**
 typedefs end
 **/

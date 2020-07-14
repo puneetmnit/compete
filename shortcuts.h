@@ -5,8 +5,8 @@ typedefs start
 // for
 #define For(i,n) for(int i=0; i<(n); ++i)
 #define rFor(i,n) for(int i=(n)-1; i>=0; --i)
-#define kFor(i,n,k) for (int i=0; i<(n); i+=(k))
-#define rkFor(i,n,k) for(int i=(n)-1; i>=0; i-=(k))
+#define kFor(i,k,n) for (int i=(k); i<(n); ++i)
+#define rkFor(i,k,n) for(int i=(n)-1; i>=k; --i)
 #define iFor(i,n) for(auto i=n.begin(); i<n.end(); ++i)
 #define riFor(i,n) for(auto i=n.rbegin(); i<n.rend(); ++i)
 

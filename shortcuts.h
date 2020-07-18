@@ -60,18 +60,8 @@ VI Range(int nums, int start = 0) {
 }
 
 template<typename C>
-inline auto Find(const C& cont, const typename C::value_type& val, typename C::const_iterator beg, typename C::const_iterator last) {
-    return std::find(beg, last, val);
-}
-
-template<typename C>
 inline auto Find(const C& cont, const typename C::value_type& val) {
-    return Find(cont, val, std::begin(cont), std::end(cont));
-}
-
-template<typename C>
-inline auto Find(const C& cont, const typename C::value_type& val, typename C::const_iterator beg) {
-    return Find(cont, val, beg, std::end(cont));
+    return std::find(std::begin(cont), std::end(cont), val);
 }
 
 
